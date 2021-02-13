@@ -17,5 +17,9 @@ public class MenuPage extends BasePage {
 	public void createMovement() {
 		clickLink("Criar Movimentação");
 	}
+	
+	public void accessScreenResumeTest() {
+		clickLink("Resumo Mensal");
+	}
 
 }

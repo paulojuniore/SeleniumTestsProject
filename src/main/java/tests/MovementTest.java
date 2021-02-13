@@ -47,5 +47,24 @@ public class MovementTest extends BaseTest {
 		
 		Assert.assertEquals(6, errors.size());
 	}
+	
+	@Test
+	public void futureMovementTest() {
+		menuPage.createMovement();
+		
+		movementPage.setMovementDate("15/05/2021");
+		movementPage.setPaymentDate("16/03/2020");
+		movementPage.setDescription("A simple movement.");
+		movementPage.setInterested("Unknown");
+		movementPage.setMovementValue("3000");
+		movementPage.setAccount("Changed test account");
+		movementPage.setPaidOut();
+		
+		movementPage.save();
+		
+		List<String> errors = movementPage.getErrors();
+		Assert.assertEquals("Data da Movimentação deve ser menor ou igual à data atual", errors.get(0));
+		Assert.assertEquals(1, errors.size());
+	}
 
 }
