@@ -11,7 +11,7 @@ public class AccountPage extends BasePage {
 	}
 	
 	public void save() {
-		clickButton(By.xpath("//button[.='Salvar']"));
+		clickButtonForText("Salvar");
 	}
 	
 	public String getSuccessMessage() {

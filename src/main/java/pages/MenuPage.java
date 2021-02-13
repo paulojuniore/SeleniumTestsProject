@@ -4,14 +4,18 @@ import core.BasePage;
 
 public class MenuPage extends BasePage {
 	
-	public void accessInitialScreenAndInsertAccount() {
+	public void insertAccount() {
 		clickLink("Contas");
 		clickLink("Adicionar");
 	}
 	
-	public void accessInitialScreenAndListAccounts() {
+	public void listAccounts() {
 		clickLink("Contas");
 		clickLink("Listar");
+	}
+	
+	public void createMovement() {
+		clickLink("Criar Movimentação");
 	}
 
 }

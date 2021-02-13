@@ -14,7 +14,7 @@ public class AccountTest extends BaseTest {
 	
 	@Test
 	public void insertAccountTest() { 
-		menuPage.accessInitialScreenAndInsertAccount();
+		menuPage.insertAccount();
 		
 		accountPage.setName("Test account");
 		accountPage.save();
@@ -24,7 +24,7 @@ public class AccountTest extends BaseTest {
 	
 	@Test
 	public void changeAccountTest() {
-		menuPage.accessInitialScreenAndListAccounts();
+		menuPage.listAccounts();
 		
 		accountPage.clickChangeAccount("Test account");
 		
@@ -37,7 +37,7 @@ public class AccountTest extends BaseTest {
 	
 	@Test
 	public void insertAccountOfTheSameNameTest() {
-		menuPage.accessInitialScreenAndInsertAccount();
+		menuPage.insertAccount();
 		
 		accountPage.setName("Changed test account");
 		accountPage.save();

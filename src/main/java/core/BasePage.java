@@ -57,6 +57,10 @@ public class BasePage {
 		clickButton(By.id(id_button));
 	}
 	
+	public void clickButtonForText(String text) {
+		clickButton(By.xpath("//button[.='"+ text +"']"));
+	}
+	
 	public String getButtonValue(String id_button) {
 		WebElement button = getDriver().findElement(By.id(id_button));
 		return button.getAttribute("value");
