@@ -1,0 +1,5 @@
+/src/main/resources/screenshots
+/target
+/.settings
+.project
+.classpath
