@@ -8,5 +8,10 @@ public class MenuPage extends BasePage {
 		clickLink("Contas");
 		clickLink("Adicionar");
 	}
+	
+	public void accessInitialScreenAndListAccounts() {
+		clickLink("Contas");
+		clickLink("Listar");
+	}
 
 }

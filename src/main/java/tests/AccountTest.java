@@ -21,5 +21,28 @@ public class AccountTest extends BaseTest {
 		
 		Assert.assertEquals("Conta adicionada com sucesso!", accountPage.getSuccessMessage());
 	}
+	
+	@Test
+	public void changeAccountTest() {
+		menuPage.accessInitialScreenAndListAccounts();
+		
+		accountPage.clickChangeAccount("Test account");
+		
+		accountPage.clearInputAccountName("nome");
+		accountPage.setName("Changed test account");
+		accountPage.save();
+		
+		Assert.assertEquals("Conta alterada com sucesso!", accountPage.getSuccessMessage());
+	}
+	
+	@Test
+	public void insertAccountOfTheSameNameTest() {
+		menuPage.accessInitialScreenAndInsertAccount();
+		
+		accountPage.setName("Changed test account");
+		accountPage.save();
+		
+		Assert.assertEquals("Já existe uma conta com esse nome!", accountPage.getFailMessage());
+	}
 
 }
