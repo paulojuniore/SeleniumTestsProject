@@ -59,6 +59,10 @@ public class BasePage {
 		getDriver().findElement(By.linkText(link_text)).click();
 	}
 	
+	public String getTextByXpath(String xpath) {
+		return getDriver().findElement(By.xpath(xpath)).getText();
+	}
+	
 	public String getLinkText(String id_element) {
 		return getDriver().findElement(By.id(id_element)).getText();
 	}
