@@ -7,7 +7,6 @@ import org.apache.commons.io.FileUtils;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Rule;
-import org.junit.Test;
 import org.junit.rules.TestName;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -37,7 +36,9 @@ public class BaseTest {
 		FileUtils.copyFile(file, new File("src" + File.separator + "main" + File.separator + "resources" + 
 				File.separator + "screenshots" + File.separator + testName.getMethodName() + ".jpg"));
 		
-//		DriverFactory.killDriver();
+		if (Properties.CLOSE_BROWSER) {
+			DriverFactory.killDriver();
+		}
 	}
 
 }

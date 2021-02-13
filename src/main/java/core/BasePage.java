@@ -9,6 +9,8 @@ import org.openqa.selenium.support.ui.Select;
 
 public class BasePage {
 	
+	public BasePage() { }
+	
 	public void writeOnTextField(String id_element, String text) {
 		getDriver().findElement(By.id(id_element)).sendKeys(text);
 	}
