@@ -1,5 +1,7 @@
 package tests;
 
+import java.util.List;
+
 import org.junit.Assert;
 import org.junit.Test;
 import core.BaseTest;
@@ -26,6 +28,24 @@ public class MovementTest extends BaseTest {
 		movementPage.save();
 		
 		Assert.assertEquals("Movimentação adicionada com sucesso!", movementPage.getSuccessMessage());
+	}
+	
+	@Test
+	public void requiredFieldsTest() {
+		menuPage.createMovement();
+		
+		movementPage.save();
+		
+		List<String> errors = movementPage.getErrors();
+		
+		Assert.assertTrue(errors.contains("Data da Movimentação é obrigatório"));
+		Assert.assertTrue(errors.contains("Data do pagamento é obrigatório"));
+		Assert.assertTrue(errors.contains("Descrição é obrigatório"));
+		Assert.assertTrue(errors.contains("Interessado é obrigatório"));
+		Assert.assertTrue(errors.contains("Valor é obrigatório"));
+		Assert.assertTrue(errors.contains("Valor deve ser um número"));
+		
+		Assert.assertEquals(6, errors.size());
 	}
 
 }

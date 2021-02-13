@@ -1,5 +1,12 @@
 package pages;
 
+import static core.DriverFactory.getDriver;
+
+import java.util.ArrayList;
+import java.util.List;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+
 import core.BasePage;
 
 public class MovementPage extends BasePage {
@@ -38,6 +45,15 @@ public class MovementPage extends BasePage {
 	
 	public String getSuccessMessage() {
 		return getTextByXpath("//div[@class='alert alert-success']");
+	}
+	
+	public List<String> getErrors() {
+		List<WebElement> errors = getDriver().findElements(By.xpath("//div[@class='alert alert-danger']//li"));
+		List<String> returnList = new ArrayList<String>();
+		for (WebElement erro : errors) {
+			returnList.add(erro.getText());
+		}
+		return returnList;
 	}
 
 }
