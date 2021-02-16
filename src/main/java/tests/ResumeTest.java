@@ -1,10 +1,12 @@
 package tests;
 
 import static org.junit.Assert.assertEquals;
+
+import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
-
 import core.BaseTest;
+import core.DriverFactory;
 import pages.MenuPage;
 import pages.ResumePage;
 
@@ -24,6 +26,13 @@ public class ResumeTest extends BaseTest {
 		resumePage.removeMovement();
 		
 		assertEquals("Movimentação removida com sucesso", resumePage.getSuccessMessage());
+	}
+	
+	@Test
+	public void MonthlySummaryTest() {
+		menuPage.accessScreenResumeTest();
+		
+		Assert.assertEquals("Seu Barriga - Extrato", DriverFactory.getDriver().getTitle());
 	}
 
 }

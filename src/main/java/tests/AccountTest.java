@@ -2,7 +2,6 @@ package tests;
 
 import org.junit.Assert;
 import org.junit.Test;
-
 import core.BaseTest;
 import pages.AccountPage;
 import pages.MenuPage;
