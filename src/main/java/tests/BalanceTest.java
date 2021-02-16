@@ -16,7 +16,7 @@ public class BalanceTest extends BaseTest {
 	public void getAccountBalanceTest() {
 		menuPage.accessHomePageTest();
 		
-		Assert.assertEquals("3000.00", balancePage.getAccountBalance("Changed test account"));
+		Assert.assertEquals("534.00", balancePage.getAccountBalance("Conta para saldo"));
 	}
 
 }

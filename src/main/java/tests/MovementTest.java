@@ -1,6 +1,7 @@
 package tests;
 
 import java.util.List;
+
 import org.junit.Assert;
 import org.junit.FixMethodOrder;
 import org.junit.Test;
@@ -25,7 +26,7 @@ public class MovementTest extends BaseTest {
 		movementPage.setDescription("A simple movement.");
 		movementPage.setInterested("Unknown");
 		movementPage.setMovementValue("3000");
-		movementPage.setAccount("Changed test account");
+		movementPage.setAccount("Conta para movimentacoes");
 		movementPage.setPaidOut();
 		
 		movementPage.save();
@@ -60,7 +61,7 @@ public class MovementTest extends BaseTest {
 		movementPage.setDescription("A simple movement.");
 		movementPage.setInterested("Unknown");
 		movementPage.setMovementValue("3000");
-		movementPage.setAccount("Changed test account");
+		movementPage.setAccount("Conta para movimentacoes");
 		movementPage.setPaidOut();
 		
 		movementPage.save();

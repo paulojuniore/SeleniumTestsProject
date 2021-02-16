@@ -4,6 +4,7 @@ import org.junit.Assert;
 import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
+
 import core.BaseTest;
 import pages.AccountPage;
 import pages.MenuPage;
@@ -28,10 +29,10 @@ public class AccountTest extends BaseTest {
 	public void test2_changeAccount() {
 		menuPage.listAccounts();
 		
-		accountPage.clickChangeAccount("Test account");
+		accountPage.clickChangeAccount("Conta para alterar");
 		
 		accountPage.clearInputAccountName("nome");
-		accountPage.setName("Changed test account");
+		accountPage.setName("Conta alterada");
 		accountPage.save();
 		
 		Assert.assertEquals("Conta alterada com sucesso!", accountPage.getSuccessMessage());
@@ -41,7 +42,7 @@ public class AccountTest extends BaseTest {
 	public void test3_insertAccountOfTheSameName() {
 		menuPage.insertAccount();
 		
-		accountPage.setName("Changed test account");
+		accountPage.setName("Conta mesmo nome");
 		accountPage.save();
 		
 		Assert.assertEquals("Já existe uma conta com esse nome!", accountPage.getFailMessage());

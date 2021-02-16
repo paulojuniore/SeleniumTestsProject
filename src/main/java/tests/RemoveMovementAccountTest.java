@@ -16,7 +16,7 @@ public class RemoveMovementAccountTest extends BaseTest {
 	public void removeAccountThatsContainsMovementTest() {
 		menuPage.listAccounts();
 		
-		accountPage.removeAccountWithMovement("Changed test account");
+		accountPage.removeAccountWithMovement("Conta com movimentacao");
 		
 		Assert.assertEquals("Conta em uso na movimentações", accountPage.getFailMessage());
 	}
