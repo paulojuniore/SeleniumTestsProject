@@ -21,5 +21,9 @@ public class MenuPage extends BasePage {
 	public void accessScreenResumeTest() {
 		clickLink("Resumo Mensal");
 	}
+	
+	public void accessHomePageTest() {
+		clickLink("Home");
+	}
 
 }
