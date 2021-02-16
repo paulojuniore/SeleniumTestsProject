@@ -30,5 +30,10 @@ public class AccountPage extends BasePage {
 	public String getFailMessage() {
 		return getTextByXpath("//div[@class='alert alert-danger']");
 	}
+	
+	public void removeAccountWithMovement(String string) {
+		obterCelula("Conta", string, "Ações", "tabelaContas")
+			.findElement(By.xpath(".//span[@class='glyphicon glyphicon-remove-circle']")).click();
+	}
 
 }

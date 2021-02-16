@@ -44,5 +44,14 @@ public class AccountTest extends BaseTest {
 		
 		Assert.assertEquals("Já existe uma conta com esse nome!", accountPage.getFailMessage());
 	}
+	
+	@Test
+	public void removeAccountThatsContainsMovementTest() {
+		menuPage.listAccounts();
+		
+		accountPage.removeAccountWithMovement("Teste 2");
+		
+		Assert.assertEquals("Conta em uso na movimentações", accountPage.getFailMessage());
+	}
 
 }
