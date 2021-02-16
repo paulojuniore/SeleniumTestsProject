@@ -2,7 +2,7 @@ package core;
 
 public class Properties {
 	
-	public static boolean CLOSE_BROWSER = false;
+	public static boolean CLOSE_BROWSER = true;
 	
 	public static Browsers browser = Browsers.CHROME;
 	

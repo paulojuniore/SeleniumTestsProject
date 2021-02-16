@@ -1,18 +1,21 @@
 package tests;
 
 import org.junit.Assert;
+import org.junit.FixMethodOrder;
 import org.junit.Test;
+import org.junit.runners.MethodSorters;
 import core.BaseTest;
 import pages.AccountPage;
 import pages.MenuPage;
 
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class AccountTest extends BaseTest {
 	
 	MenuPage menuPage = new MenuPage();
 	AccountPage accountPage = new AccountPage();
 	
 	@Test
-	public void insertAccountTest() { 
+	public void test1_insertAccount() { 
 		menuPage.insertAccount();
 		
 		accountPage.setName("Test account");
@@ -22,7 +25,7 @@ public class AccountTest extends BaseTest {
 	}
 	
 	@Test
-	public void changeAccountTest() {
+	public void test2_changeAccount() {
 		menuPage.listAccounts();
 		
 		accountPage.clickChangeAccount("Test account");
@@ -35,22 +38,13 @@ public class AccountTest extends BaseTest {
 	}
 	
 	@Test
-	public void insertAccountOfTheSameNameTest() {
+	public void test3_insertAccountOfTheSameName() {
 		menuPage.insertAccount();
 		
 		accountPage.setName("Changed test account");
 		accountPage.save();
 		
 		Assert.assertEquals("Já existe uma conta com esse nome!", accountPage.getFailMessage());
-	}
-	
-	@Test
-	public void removeAccountThatsContainsMovementTest() {
-		menuPage.listAccounts();
-		
-		accountPage.removeAccountWithMovement("Teste 2");
-		
-		Assert.assertEquals("Conta em uso na movimentações", accountPage.getFailMessage());
 	}
 
 }

@@ -1,20 +1,23 @@
 package tests;
 
 import java.util.List;
-
 import org.junit.Assert;
+import org.junit.FixMethodOrder;
 import org.junit.Test;
+import org.junit.runners.MethodSorters;
+
 import core.BaseTest;
 import pages.MenuPage;
 import pages.MovementPage;
 
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class MovementTest extends BaseTest {
 	
 	MenuPage menuPage = new MenuPage();
 	MovementPage movementPage = new MovementPage();
 	
 	@Test
-	public void createMovement() {
+	public void test1_createMovement() {
 		menuPage.createMovement();
 		
 		movementPage.setMovementDate("10/04/2020");
@@ -31,7 +34,7 @@ public class MovementTest extends BaseTest {
 	}
 	
 	@Test
-	public void requiredFieldsTest() {
+	public void test2_requiredFields() {
 		menuPage.createMovement();
 		
 		movementPage.save();
@@ -49,7 +52,7 @@ public class MovementTest extends BaseTest {
 	}
 	
 	@Test
-	public void futureMovementTest() {
+	public void test3_futureMovement() {
 		menuPage.createMovement();
 		
 		movementPage.setMovementDate("15/05/2021");

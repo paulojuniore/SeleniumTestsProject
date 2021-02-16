@@ -12,7 +12,7 @@ public class BalanceTest extends BaseTest {
 	
 	@Test
 	public void getAccountBalanceTest() {
-		Assert.assertEquals("3000.00", balancePage.getAccountBalance("Teste 2"));
+		Assert.assertEquals("3000.00", balancePage.getAccountBalance("Changed test account"));
 	}
 
 }
