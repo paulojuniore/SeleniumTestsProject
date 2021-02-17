@@ -1,15 +1,12 @@
 package tests;
 
 import org.junit.Assert;
-import org.junit.FixMethodOrder;
 import org.junit.Test;
-import org.junit.runners.MethodSorters;
-
 import core.BaseTest;
 import pages.AccountPage;
 import pages.MenuPage;
 
-@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+//@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class AccountTest extends BaseTest {
 	
 	MenuPage menuPage = new MenuPage();

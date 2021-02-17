@@ -5,18 +5,15 @@ import static org.junit.Assert.assertEquals;
 import java.util.List;
 
 import org.junit.Assert;
-import org.junit.FixMethodOrder;
 import org.junit.Test;
-import org.junit.runners.MethodSorters;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-
 import core.BaseTest;
 import core.DriverFactory;
 import pages.MenuPage;
 import pages.ResumePage;
 
-@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+//@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class ResumeTest extends BaseTest {
 	
 	private MenuPage menuPage = new MenuPage();
