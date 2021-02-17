@@ -6,9 +6,16 @@ public class Properties {
 	
 	public static Browsers browser = Browsers.CHROME;
 	
+	public static ExecutionType EXECUTION_TYPE = ExecutionType.GRID;
+
 	public enum Browsers {
 		CHROME,
 		FIREFOX
+	}
+	
+	public enum ExecutionType {
+		LOCAL,
+		GRID
 	}
 
 }
