@@ -20,7 +20,7 @@
   			<version>3.0.0-M5</version>
   			<configuration>
   				<includes>
-  					<include>io/github/paulojuniore/suite/*.java</include>
+  					<include>SuiteTest.java</include>
   				</includes>
   				<parallel>all</parallel>
   				<threadCount>3</threadCount>

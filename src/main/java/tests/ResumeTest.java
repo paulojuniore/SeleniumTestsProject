@@ -25,11 +25,6 @@ public class ResumeTest extends BaseTest {
 	@Test
 	public void test1_removeMovement() {
 		menuPage.accessScreenResumeTest();
-		
-		resumePage.selectMonth("Abril");
-		resumePage.selectYear("2020");
-		
-		resumePage.clickButton(By.xpath("//input[@value='Buscar']"));
 		resumePage.removeMovement();
 		
 		assertEquals("Movimentação removida com sucesso!", resumePage.getSuccessMessage());
